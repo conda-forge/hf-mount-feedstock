@@ -17,7 +17,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/hf-mount-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/hf-mount-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -31,20 +38,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=27940&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hf-mount-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=27940&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hf-mount-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=27940&branchName=main">
@@ -72,6 +65,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-hf--mount-green.svg)](https://anaconda.org/conda-forge/hf-mount) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hf-mount.svg)](https://anaconda.org/conda-forge/hf-mount) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hf-mount.svg)](https://anaconda.org/conda-forge/hf-mount) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hf-mount.svg)](https://anaconda.org/conda-forge/hf-mount) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-hf--mount--fuse-green.svg)](https://anaconda.org/conda-forge/hf-mount-fuse) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hf-mount-fuse.svg)](https://anaconda.org/conda-forge/hf-mount-fuse) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hf-mount-fuse.svg)](https://anaconda.org/conda-forge/hf-mount-fuse) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hf-mount-fuse.svg)](https://anaconda.org/conda-forge/hf-mount-fuse) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-hf--mount--nfs-green.svg)](https://anaconda.org/conda-forge/hf-mount-nfs) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hf-mount-nfs.svg)](https://anaconda.org/conda-forge/hf-mount-nfs) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hf-mount-nfs.svg)](https://anaconda.org/conda-forge/hf-mount-nfs) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hf-mount-nfs.svg)](https://anaconda.org/conda-forge/hf-mount-nfs) |
 
 Installing hf-mount
@@ -84,16 +78,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `hf-mount, hf-mount-nfs` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `hf-mount, hf-mount-fuse, hf-mount-nfs` can be installed with `conda`:
 
 ```
-conda install hf-mount hf-mount-nfs
+conda install hf-mount hf-mount-fuse hf-mount-nfs
 ```
 
 or with `mamba`:
 
 ```
-mamba install hf-mount hf-mount-nfs
+mamba install hf-mount hf-mount-fuse hf-mount-nfs
 ```
 
 It is possible to list all of the versions of `hf-mount` available on your platform with `conda`:
