@@ -1,5 +1,5 @@
 context:
-  version: "0.10.0"
+  version: "0.10.1"
 
 recipe:
   name: hf-mount
@@ -7,7 +7,7 @@ recipe:
 
 source:
   url: https://github.com/huggingface/hf-mount/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 10dcb56e216779a33a99d25a716673cb0aacd16ea675410292560032e5b42e61
+  sha256: 5b567736a1fd715786d0a98190679c7055176538f39947cd77c99f83d6939f06
 
 build:
   number: 0
